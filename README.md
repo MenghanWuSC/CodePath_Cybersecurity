@@ -19,13 +19,17 @@ Each color is vulnerable to only 2 of the 6 possible exploits. First discover wh
 
 Vulnerability #1: SQL Injection (SQLi)
 
-Description: `'`
+Description: To start the SQL Injection attack, be sure to try on some particular symbols `'` `"` to see whether the website sanitizes the inputs.
+It seems that the Blue site fails to do so, which is subject to possible SQL Injection attacks.
+
+Symptom indicates:
+> Database query failed.
 
 <img src="blue-vuln1.gif">
 
 Vulnerability #2: Session Hijacking/Fixation
 
-Description: 
+Description: With the help of `public/hacktools/change_session_id.php` you may arbitrarily change the **session ID**. That is, if the website does not properly implement the authentication mechanism, just as the Blue site, the attacker may simultaneously log-in in multiple browsers with the same session ID.
 
 <img src="blue-vuln1.gif">
 
