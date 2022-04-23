@@ -29,7 +29,7 @@ Symptom indicates:
 
 Vulnerability #2: Session Hijacking/Fixation
 
-Description: With the help of `public/hacktools/change_session_id.php` you may arbitrarily change the **session ID**. That is, if the website does not properly implement the authentication mechanism, just as the Blue site, the attacker may simultaneously log-in in multiple browsers with the same session ID.
+Description: With the help of `public/hacktools/change_session_id.php` you may arbitrarily change the **session ID**. That is, if the website does not properly implement the authentication mechanism, just as the Blue site, the adversary may simultaneously log-in in multiple browsers with the same session ID.
 
 <img src="blue-vuln1.gif">
 
@@ -46,7 +46,7 @@ Symptom indicates:
 
 Vulnerability #2: Cross-Site Scripting (XSS)
 
-Description: When it comes to the feature: **form input**, a adequate sanitizing of inputs is required. It seems that the Green site fails to do so, which is subject to possible Cross-Site Scripting attacks when logging-in to the backend.
+Description: When it comes to the feature: **form input**, an adequate sanitizing of inputs is required. It seems that the Green site fails to do so, which is subject to possible Cross-Site Scripting attacks when logging-in to the backend.
 
 <img src="green-vuln1.gif">
 
@@ -54,13 +54,13 @@ Description: When it comes to the feature: **form input**, a adequate sanitizing
 
 Vulnerability #1: Insecure Direct Object Reference (IDOR)
 
-Description:
+Description: To be noted, the unshown/unlinked web pages do not mean those are under secure. The adversary may use **the brute-force search** to uncover those internal objects. In this case, some hidden user data on the Red site get exposure.
 
 <img src="red-vuln1.gif">
 
 Vulnerability #2: Cross-Site Request Forgery (CSRF)
 
-Description:
+Description: Only those **web forms** with **legitimate tokens** are accepted. If not, just as the symptom Red site, the adversary may forge any arbitrary forms to compromise the integrity of the stored data.
 
 <img src="red-vuln1.gif">
 
