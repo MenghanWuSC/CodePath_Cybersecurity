@@ -37,13 +37,16 @@ Description: With the help of `public/hacktools/change_session_id.php` you may a
 
 Vulnerability #1: Username Enumeration
 
-Description:
+Description: As the developer of the website, you had better not leak additional information in case of **the oracle attack**. In this case, take a careful look at the Green site's signal messages when using the Username `jmonroe99`.
+
+Symptom indicates:
+> Log in was unsuccessful.
 
 <img src="green-vuln1.gif">
 
 Vulnerability #2: Cross-Site Scripting (XSS)
 
-Description:
+Description: When it comes to the feature: **form input**, a adequate sanitizing of inputs is required. It seems that the Green site fails to do so, which is subject to possible Cross-Site Scripting attacks when logging-in to the backend.
 
 <img src="green-vuln1.gif">
 
