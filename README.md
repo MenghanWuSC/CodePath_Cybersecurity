@@ -1,3 +1,3 @@
-# codepath_homework
+# CodePath Spring 2022
 
-See *branches* for assignments.
+See *branches* for sections.
